@@ -1,7 +1,8 @@
 import { useNavigate } from "react-router-dom";
-import {useEffect} from 'react'
+import { useEffect } from "react";
 
 import Button from "components/Button/Button";
+import { ROUTES } from "constants/routes";
 
 import { PageWrapper, ButtonControl } from "./styles";
 
@@ -9,7 +10,7 @@ function About() {
   const navigate = useNavigate();
 
   const goToHomePage = () => {
-    navigate("/");
+    navigate(ROUTES.HOME);
   };
 
   const goBack = () => {
@@ -19,9 +20,9 @@ function About() {
   useEffect(() => {
     // Unmounting
     return () => {
-      console.log("Page About UNMOUNTING")
-    }
-  }, [])
+      console.log("Page About UNMOUNTING");
+    };
+  }, []);
 
   return (
     <PageWrapper>

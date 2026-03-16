@@ -1,4 +1,6 @@
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
+
+import { ROUTES } from "constants/routes";
 
 import {
   LayoutWrapper,
@@ -17,11 +19,11 @@ import {
 import { type LayoutProps } from "./types";
 
 function Layout({ children }: LayoutProps) {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const goToHomePage = () => {
-    navigate("/")
-  }
+    navigate(ROUTES.HOME);
+  };
   return (
     <LayoutWrapper>
       <Header>
@@ -32,16 +34,19 @@ function Layout({ children }: LayoutProps) {
           />
         </Logo>
         <NavigationContainer>
-          <HeaderLink style={getActiveStyles} to="/">
+          <HeaderLink style={getActiveStyles} to={ROUTES.HOME}>
             Home
           </HeaderLink>
-          <HeaderLink style={getActiveStyles} to="/contactUs">
+          <HeaderLink style={getActiveStyles} to={ROUTES.CLIENTS}>
+            Clients
+          </HeaderLink>
+          <HeaderLink style={getActiveStyles} to={ROUTES.CONTACT_US}>
             Contact Us
           </HeaderLink>
-          <HeaderLink style={getActiveStyles} to="/about">
+          <HeaderLink style={getActiveStyles} to={ROUTES.ABOUT}>
             About
           </HeaderLink>
-          <HeaderLink style={getActiveStyles} to="/login">
+          <HeaderLink style={getActiveStyles} to={ROUTES.LOGIN}>
             Login
           </HeaderLink>
         </NavigationContainer>
@@ -55,10 +60,11 @@ function Layout({ children }: LayoutProps) {
           />
         </FooterLogo>
         <FooterNavigation>
-          <FooterLink to="/">Home</FooterLink>
-          <FooterLink to="/contactUs">Contact Us</FooterLink>
-          <FooterLink to="/about">About</FooterLink>
-          <FooterLink to="/login">Login</FooterLink>
+          <FooterLink to={ROUTES.HOME}>Home</FooterLink>
+          <FooterLink to={ROUTES.CLIENTS}>Clients</FooterLink>
+          <FooterLink to={ROUTES.CONTACT_US}>Contact Us</FooterLink>
+          <FooterLink to={ROUTES.ABOUT}>About</FooterLink>
+          <FooterLink to={ROUTES.LOGIN}>Login</FooterLink>
         </FooterNavigation>
       </Footer>
     </LayoutWrapper>
