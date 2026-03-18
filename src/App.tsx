@@ -20,6 +20,7 @@ import Homework_08 from "homeworks/Homework_08/Homework_08";
 import Homework_09 from "homeworks/Homework_09/Homework_09";
 import Homework_10 from "homeworks/Homework_10/Homework_10";
 import Homework_12 from "homeworks/Homework_12/Homework_12";
+import Homework_14 from "homeworks/Homework_14/Homework_14";
 
 // Lessons
 import Lesson_07 from "./lessons/Lesson_07/Lesson_07";
@@ -53,6 +54,7 @@ function App() {
       {/* <Homework_09 /> */}
       {/* <Homework_10 /> */}
       {/* <Homework_12 /> */}
+      <Homework_14 />
       {/* Lessons */}
       {/* <Lesson_06 /> */}
       {/* <Lesson_07 /> */}
@@ -60,7 +62,7 @@ function App() {
       {/* <Lesson_09 /> */}
       {/* <Lesson_10 /> */}
       {/* <Lesson_12 /> */}
-      <Lesson_14 />
+      {/* <Lesson_14 /> */}
     </BrowserRouter>
   );
 }

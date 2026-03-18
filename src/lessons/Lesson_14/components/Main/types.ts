@@ -1,4 +1,4 @@
-import { type Dispatch, type SetStateAction } from "react";
+import {type Dispatch, type SetStateAction} from 'react'
 
 export interface UserData {
   fullName: string;
